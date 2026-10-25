@@ -7,9 +7,7 @@ This app can be booted in three simple steps:
 - run the commands below in terminal 
 - open http://localhost:3000, preferably a browser other than Safari         
 
-And requires no extra setup. 
-
-Font-switching demonstration:
+And requires no extra setup. Font-switching demonstration:
 
 ![Alt text](/public/interface-nunito.jpg)
 ![Alt text](/public/interface-lora.jpg)
