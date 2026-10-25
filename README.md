@@ -1,6 +1,6 @@
 # void
 
-An web where you can speak out about your thoughts. Type it in and save entries as an image.
+A web where you can speak out about your thoughts. Type it in and save entries as an image.
 
 This app can be booted in three simple steps: 
 - downloading this repository
