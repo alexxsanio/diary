@@ -5,6 +5,7 @@ An web where you can speak out about your thoughts. Type in and save entries as 
 This app can be booted in two simple steps: 
 - downloading this repository
 - run the two command below in terminal          
+
 And requires no extra setup. 
 
 ![Alt text](/public/interface.jpg)
