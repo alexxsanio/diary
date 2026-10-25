@@ -2,7 +2,7 @@
 
 An web where you can speak out about your thoughts.
 
-<img width="1726" height="904" alt="Screenshot 2026-10-24 at 8 33 50 PM" src="/public/interface.jpg" />
+![Alt text](/public/interface.jpg)
 
 ## Run locally
 
