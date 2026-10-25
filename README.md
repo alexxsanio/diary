@@ -1,10 +1,15 @@
 # void
 
-An web where you can speak out about your thoughts.
+An web where you can speak out about your thoughts. Type in and save entries as image.
+
+This app can be booted in two simple steps: 
+- downloading this repository
+- run the two command below in terminal
+and requires no extra setup. 
 
 ![Alt text](/public/interface.jpg)
 
-## Run locally
+## Download
 
 Requires Node.js 18.18+ (Node.js 20+ recommended).
 
