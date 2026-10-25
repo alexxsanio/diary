@@ -2,7 +2,7 @@
 
 An web where you can speak out about your thoughts.
 
-<img width="1726" height="904" alt="Screenshot 2026-10-24 at 8 33 50 PM" src="https://github.com/user-attachments/assets/5620c78e-363b-411c-b5c0-821fe757ef17" />
+<img width="1726" height="904" alt="Screenshot 2026-10-24 at 8 33 50 PM" src="public/interface.jpg" />
 
 ## Run locally
 
