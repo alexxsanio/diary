@@ -9,7 +9,8 @@ This app can be booted in three simple steps:
 
 And requires no extra setup. 
 
-![Alt text](/public/interface.jpg)
+![Alt text](/public/interface-nunito.jpg)
+![Alt text](/public/interface-lora.jpg)
 
 ## Download
 
