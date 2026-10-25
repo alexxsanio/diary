@@ -4,7 +4,8 @@ An web where you can speak out about your thoughts. Type in and save entries as 
 
 This app can be booted in two simple steps: 
 - downloading this repository
-- run the two command below in terminal          
+- run the commands below in terminal 
+- open http://localhost:3000, preferably a browser other than Safari         
 
 And requires no extra setup. 
 
