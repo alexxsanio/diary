@@ -1,8 +1,8 @@
 # void
 
-An web where you can speak out about your thoughts. Type in and save entries as image.
+An web where you can speak out about your thoughts. Type it in and save entries as an image.
 
-This app can be booted in two simple steps: 
+This app can be booted in three simple steps: 
 - downloading this repository
 - run the commands below in terminal 
 - open http://localhost:3000, preferably a browser other than Safari         
