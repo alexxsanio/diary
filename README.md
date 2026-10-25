@@ -9,6 +9,8 @@ This app can be booted in three simple steps:
 
 And requires no extra setup. 
 
+Font-switching demonstration:
+
 ![Alt text](/public/interface-nunito.jpg)
 ![Alt text](/public/interface-lora.jpg)
 
