@@ -28,7 +28,7 @@ export default function Home() {
   const [font, setFont] = useState<"nunito" | "lora">("nunito");
   const [saving, setSaving] = useState<string | null>(null);
 
-  const entryRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const entryRefs = useRef<Record<string, HTMLElement | null>>({});
 
   function handleDraftChange(
     event: React.ChangeEvent<HTMLTextAreaElement>

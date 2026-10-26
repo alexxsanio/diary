@@ -1,13 +1,15 @@
 {
   "name": "stardew-journal",
+  "homepage": "https://alexxsanio.github.io/void",
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "deploy": "npm run build && gh-pages -d out",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  },
+  }, 
   "dependencies": {
     "html-to-image": "^1.11.13",
     "lucide-react": "^1.61.0",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@types/node": "^22.13.0",
     "@types/react": "^19.0.0",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.7.3"
   }
 }
