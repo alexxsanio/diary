@@ -1,12 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
-  trailingSlash: true,
-  basePath: "/void",
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
