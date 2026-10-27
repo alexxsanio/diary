@@ -53,7 +53,7 @@ export default function Home() {
   
   
   async function saveEntry(id: string) {
-    const element = document.querySelector(".journal") as HTMLElement | null;
+    const element = document.querySelector(".journal") as HTMLDivElement | null;
     if (!element || saving) return;
 
     if (element) {
