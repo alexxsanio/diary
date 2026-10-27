@@ -47,7 +47,7 @@ button {
       rgba(24, 39, 29, 0.1) 55%,
       rgba(24, 39, 29, 0.3)
     ),
-    url("../public/stardew.jpg") center center / cover no-repeat,
+    url("../../public/stardew.jpg") center center / cover no-repeat,
     #93b77f;
 }
 
