@@ -23,6 +23,8 @@ type Entry = {
 };
 
 export default function Home() {
+  const [showSavePanel, setShowSavePanel] = useState(false);
+  const [showSharedEntries, setShowSharedEntries] = useState(false);
   const [entries, setEntries] = useState<Entry[]>([]);
   const [draft, setDraft] = useState("");
   const [font, setFont] = useState<"nunito" | "lora">("nunito");
@@ -98,14 +100,16 @@ export default function Home() {
             <footer className="entry-footer">
               <span>Entry {String(index + 1).padStart(2, "0")}</span>
               <button
-                className="save-button"
-                onClick={() => saveEntry(entry.id)}
-                disabled={saving !== null}
-                aria-label={`Save entry ${index + 1} as an image`}
-                title="Save as PNG"
+                type="button"
+                className="share-button"
+                onClick={() => {
+                  // Open the sharing flow for this entry.
+                  setDraft(entry.content);
+                  setShowSharedEntries(false);
+                  setShowSavePanel(false);
+                }}
               >
-                <ImageDown size={16} />
-                <span>{saving === entry.id ? "Saving…" : "Save image"}</span>
+                Share to others
               </button>
             </footer>
           </article>
@@ -119,48 +123,80 @@ export default function Home() {
           submitEntry();
         }}
       >
-        <div className="composer-tools">
-          <Type size={16} aria-hidden="true" />
-          <label htmlFor="font-choice" className="sr-only">
-            Journal font
-          </label>
-          <select
-            id="font-choice"
-            value={font}
-            onChange={(event) =>
-              setFont(event.target.value as "nunito" | "lora")
-            }
-            aria-label="Choose font"
-          >
-            <option value="nunito">Nunito</option>
-            <option value="lora">Lora</option>
-          </select>
+        <div className="composer-row">
+          {/* Column 1: Font selector */}
+          <div className="composer-tools">
+            <Type size={16} aria-hidden="true" />
+            <label htmlFor="font-choice" className="sr-only">
+              Journal font
+            </label>
+            <select
+              id="font-choice"
+              value={font}
+              onChange={(event) =>
+                setFont(event.target.value as "nunito" | "lora")
+              }
+              aria-label="Choose font"
+            >
+              <option value="nunito">Nunito</option>
+              <option value="lora">Lora</option>
+            </select>
+          </div>
+
+          {/* Column 2: Text input */}
+          <div className="input-column">
+            <textarea
+              className="journal-input"
+              value={draft}
+              onChange={handleDraftChange}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" && !event.shiftKey) {
+                  event.preventDefault();
+                  submitEntry();
+                }
+              }}
+              placeholder="Write something..."
+              rows={1}
+            />
+          </div>
+
+          {/* Column 3: Action buttons */}
+          <div className="composer-actions">
+            <button
+              type="button"
+              onClick={() => {
+                setShowSavePanel((current) => !current);
+                setShowSharedEntries(false);
+              }}
+            >
+              Save panel
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setShowSharedEntries((current) => !current);
+                setShowSavePanel(false);
+              }}
+            >
+              Shared by others
+            </button>
+          </div>
         </div>
 
-        <textarea
-          ref={textareaRef}
-          value={draft}
-          onChange={handleDraftChange}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" && !event.shiftKey) {
-              event.preventDefault();
-              submitEntry();
-            }
-          }}
-          placeholder="Write something..."
-          rows={1}
-          className="journal-input"
-        />
+        {showSavePanel && (
+          <div className="side-panel">
+            <p>Save panel</p>
+            <p>Your saved entries will appear here.</p>
+          </div>
+        )}
 
-        <button
-          className="submit-button"
-          type="submit"
-          disabled={!draft.trim()}
-          aria-label="Add journal entry"
-          title="Add entry (Enter)"
-        >
-          <ArrowUp size={20} />
-        </button>
+        {showSharedEntries && (
+          <div className="side-panel">
+            <p>Shared entries</p>
+            <p>Entries shared by other users will appear here.</p>
+          </div>
+        )}
       </form>
     </main>
   );
