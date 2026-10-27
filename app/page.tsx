@@ -28,7 +28,7 @@ export default function Home() {
   const [font, setFont] = useState<"nunito" | "lora">("nunito");
   const [saving, setSaving] = useState<string | null>(null);
 
-  const entryRefs = useRef<Record<string, HTMLElement | null>>({});
+  const entryRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   function handleDraftChange(
     event: React.ChangeEvent<HTMLTextAreaElement>
@@ -53,7 +53,7 @@ export default function Home() {
   
   
   async function saveEntry(id: string) {
-    const element = document.querySelector(".journal") as HTMLDivElement | null;
+    const element = document.querySelector(".journal") as HTMLElement | null;
     if (!element || saving) return;
 
     if (element) {
